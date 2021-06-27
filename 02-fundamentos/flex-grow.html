@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex-grow</title>
+
+    <style type="text/css">
+        /* Flex Container */
+        .container {
+            max-width: 420px;
+            /*height: 300px;*/
+            margin: 0 auto;
+            display: flex;
+            border: 1px solid #ccc;
+            flex-wrap: wrap;
+        }
+        /* Flex Item */
+        .item {
+            /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+            /* flex 1 não deve ser usado junto com propriedades de flex-grow */
+            /*flex: 1;*/
+            margin: 5px;
+            padding: 0 10px;
+            background: tomato;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+            margin: 20px 0 0 0;
+            font-size: 1.25em;
+            font-weight: normal;
+        }
+
+        body {
+            font-family: monospace;
+            color: #333;
+        }
+
+        .flex {
+            flex: 1;
+        }
+        .column {
+            flex-direction: column;
+        }
+        .grow0 {
+            flex-grow: 0;
+        }
+        .grow1 {
+            flex-grow: 1;
+        }
+        .grow2 {
+            flex-grow: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>flex-grow se coloca nos items não no container</h1>
+
+    <h2>align-items: grow0</h2>
+    <section class="container">
+        <div class="item grow0">1</div>
+        <div class="item grow0">2</div>
+        <div class="item grow0">8</div>
+    </section>
+
+    <h2>align-items: grow1</h2>
+    <section class="container">
+        <div class="item grow1">1</div>
+        <div class="item grow1">2</div>
+        <div class="item grow1">8</div>
+    </section>
+
+    <h2>align-items: grow1 largo</h2>
+    <section class="container">
+        <div class="item grow1">1</div>
+        <div class="item grow1">Teste do conteúdo 2</div>
+        <div class="item grow1">8</div>
+    </section>
+
+    <h2>align-items: grow2</h2>
+    <section class="container">
+        <div class="item grow2">1</div>
+        <div class="item grow2">2</div>
+        <div class="item grow2">8</div>
+    </section>
+
+    <h2>align-items: grow 0, 1, 2</h2>
+    <section class="container">
+        <div class="item grow0">1</div>
+        <div class="item grow1">2</div>
+        <div class="item grow2">8</div>
+    </section>
+</body>
+</html>

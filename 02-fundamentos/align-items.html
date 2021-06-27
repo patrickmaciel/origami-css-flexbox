@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>align-items</title>
+
+    <style type="text/css">
+        /* Flex Container */
+        .container {
+            max-width: 420px;
+            margin: 0 auto;
+            display: flex;
+            border: 1px solid #ccc;
+        }
+        /* Flex Item */
+        .item {
+            /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+            flex: 1;
+            margin: 5px;
+            padding: 0 10px;
+            background: tomato;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0 0 0;
+            font-size: 1.25em;
+            font-weight: normal;
+        }
+
+        body {
+            font-family: monospace;
+            color: #333;
+        }
+
+        .flex {
+            flex: 1;
+        }
+        .column {
+            flex-direction: column;
+        }
+        .stretch {
+            align-items: stretch;
+        }
+        .flex-start {
+            align-items: flex-start;
+        }
+        .flex-end {
+            align-items: flex-end;
+        }
+        .center {
+            align-items: center;
+        }
+        .baseline {
+            align-items: baseline;
+        }
+
+        .alinhamento-central {
+            height: 400px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .alinhamento-central .item {
+            flex: 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>align-items: flex-start</h1>
+    <section class="container flex-start">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do item</div>
+        <div class="item">Teste 3 do item agora mesmo</div>
+        <div class="item">Contato</div>
+        <div class="item">3</div>
+    </section>
+
+    <h1>align-items: flex-end</h1>
+    <section class="container flex-end">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do item</div>
+        <div class="item">Teste 3 do item agora mesmo</div>
+        <div class="item">Contato</div>
+        <div class="item">3</div>
+    </section>
+
+    <h1>align-items: center</h1>
+    <section class="container center">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do item</div>
+        <div class="item">Teste 3 do item agora mesmo</div>
+        <div class="item">Contato</div>
+        <div class="item">3</div>
+    </section>
+
+    <h1>align-items: stretch</h1>
+    <section class="container stretch">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do item</div>
+        <div class="item">Teste 3 do item agora mesmo</div>
+        <div class="item">Contato</div>
+        <div class="item">3</div>
+    </section>
+
+    <h1>align-items: baseline</h1>
+    <section class="container baseline">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do item</div>
+        <div class="item">Teste 3 do item agora mesmo</div>
+        <div class="item">Contato</div>
+        <div class="item">3</div>
+    </section>
+
+    <!-- COLUMN -->
+    <h1>align-items: flex-start column</h1>
+    <section class="container flex-start column">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do item</div>
+        <div class="item">Teste 3 do item agora mesmo</div>
+        <div class="item">Contato</div>
+        <div class="item">3</div>
+    </section>
+
+    <h1>align-items: flex-end column</h1>
+    <section class="container flex-end column">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do item</div>
+        <div class="item">Teste 3 do item agora mesmo</div>
+        <div class="item">Contato</div>
+        <div class="item">3</div>
+    </section>
+
+    <h1>align-items: center column</h1>
+    <section class="container center column">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do item</div>
+        <div class="item">Teste 3 do item agora mesmo</div>
+        <div class="item">Contato</div>
+        <div class="item">3</div>
+    </section>
+
+    <h1>align-items: stretch column</h1>
+    <section class="container stretch column">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do item</div>
+        <div class="item">Teste 3 do item agora mesmo</div>
+        <div class="item">Contato</div>
+        <div class="item">3</div>
+    </section>
+
+    <h1>align-items: baseline column</h1>
+    <section class="container baseline column">
+        <div class="item">1</div>
+        <div class="item">Teste 2 do item</div>
+        <div class="item">Teste 3 do item agora mesmo</div>
+        <div class="item">Contato</div>
+        <div class="item">3</div>
+    </section>
+
+    <h1>align-items: center e justify-content center</h1>
+    <section class="container alinhamento-central">
+        <div class="item">Teste 3 do item agora mesmo</div>
+    </section>
+</body>
+</html>
